@@ -3,12 +3,17 @@
 // in the html.
 // This function will run as soon as the page loads
 $(function () {
+  // formatted the current hour into 24 hours
   var currentHour = parseInt(dayjs().format('H'));
 
+  // Displays the current date in the header element already created for us in the HTML //
+
+  var currentDate = dayjs().format('ddd, MMMM, D, YYYY');
+  $('#currentDay').text(currentDate);
 
   // Applying past, present, future class to each time block
 
-  $('time-block').each(function () {
+  $('.time-block').each(function () {
     var timeBlockId = $(this).attr('id');
     var hourId = parseInt(timeBlockId.split('-')[1]);
 
@@ -21,6 +26,17 @@ $(function () {
       $(this).addClass('future');
     }
   })
+});
+
+$('.time-block').each(function () {
+  var timeBlockId = $(this).attr('id');
+  var hourId = timeBlockId.split('-')[1];
+  var descriptionTextArea = $(this).find('.description');
+  var savedDescription = localStorage.getItem(hourId);
+
+  if (savedDescription) {
+    descriptionTextArea.val(savedDescription);
+  }
 });
 
 // Add a listener for click events on the save button.
@@ -37,6 +53,8 @@ saveButtons.on('click', function () {
   // create event listner that will save the text - localStorage
   localStorage.setItem(hourId, descriptionValue);
 });
+
+
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour.
 
