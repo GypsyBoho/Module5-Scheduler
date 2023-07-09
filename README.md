@@ -18,18 +18,21 @@
 - Its very flexible, if you want to change one of the tasks or schedules just delete the text and replace it with the new text and it will save it
 - It also visually updates based on the current time of the day, so you can see exactly what time it is at a glance
 - The current time slot is represented by green, the past time slots are represented by red and the future time slots are represented in grey
+- Once you get in the habbit of using this work day scheduler regularly and add all of your notes, reminders, events for the day it really helps to stay organized and focused throughout the day.
 - I learned a lot about Dayjs creating this app and how through Javascript and jquery we can dynamically update classes and id's based on local time.
 
 
-[Work Day Scheduler](https://gypsyboho.github.io/Module3-Challenge/)
+[Work Day Scheduler](https://gypsyboho.github.io/Module5-Scheduler/)
 
 ## Usage 
 
-To use the password generator 
-- click on the "Generate Password" button
-- type in the number of characters you want in your password. It must be between 8 and 128 characters
-- decide if you want upper case letters, lower case letters, numerical characters and or special characters to be included in the password
-- you should see the randomly generated password appear within the window once you have cycled through all the choices
+To use the work day scheduler 
+- You'll notice that the current date is shown automatically at the top of the page
+- Click on any time block between 9AM and 5PM and type in a note, event or other text
+- Click the save button on the right-hand-side of that row. This will save your text so that it will show the next day
+- If you are typing in some text that you don't use often, no need to save it, and when the page is refreshed the next day, that text will be gone, allowing you to type in new text without having to delete the previous text.
+- If you want to delete text some text simply click inside the hour block and delete the text.
+
 
 ## Credits
 
