@@ -51,6 +51,7 @@ saveButtons.on('click', function () {
   localStorage.setItem(hourId, descriptionValue);
 });
 
+
 // Pseudo Code
 // Step 1
 // Create all your Global variables
@@ -64,5 +65,6 @@ saveButtons.on('click', function () {
 // Step 3 - creat event listners
 // on.click, handle save function
 // no need to call the start function because it already populates on the page
+
 
 // Add event listeners and a function to start the program/load the information on the calendar
