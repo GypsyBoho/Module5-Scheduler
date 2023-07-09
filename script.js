@@ -51,7 +51,6 @@ saveButtons.on('click', function () {
   localStorage.setItem(hourId, descriptionValue);
 });
 
-]
 // Pseudo Code
 // Step 1
 // Create all your Global variables
