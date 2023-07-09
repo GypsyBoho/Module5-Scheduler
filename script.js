@@ -3,29 +3,42 @@
 // in the html.
 // This function will run as soon as the page loads
 $(function () {
-  var currentHour = dayjs().hour();
+  var currentHour = parseInt(dayjs().format('H'));
+
+
+  // Applying past, present, future class to each time block
+
+  $('time-block').each(function () {
+    var timeBlockId = $(this).attr('id');
+    var hourId = parseInt(timeBlockId.split('-')[1]);
+
+    // applying different classes depending on relation to current time //
+    if (hourId < currentHour) {
+      $(this).addClass('past');
+    } else if (hourId === currentHour) {
+      $(this).addClass('present');
+    } else {
+      $(this).addClass('future');
+    }
+  })
+});
 
 // Add a listener for click events on the save button.
-  var saveButtons = $('.saveBtn');
+var saveButtons = $('.saveBtn');
 
-  // Add jquery event listner
-  saveButtons.on('click', function () {
-  var timeBlock = $(this).closest('.time-block'); 
+// Add jquery event listener
+saveButtons.on('click', function () {
+  var timeBlock = $(this).closest('.time-block');
   var timeBlockId = timeBlock.attr('id');
-  var hourId = timeBlockId.split('-')[1]
+  var hourId = parseInt(timeBlockId.split('-')[1]);
   var descriptionTextArea = timeBlock.find('.description');
   var descriptionValue = descriptionTextArea.val();
 
   // create event listner that will save the text - localStorage
   localStorage.setItem(hourId, descriptionValue);
-  });
-
-
-  // because they have id's on differnet elments, we can save elements by id's, target the value (by id), key would be the 
-// when the program start we want to add a CSS class based on what time it is rn.
-// day.js
-
-  // variables at the top, then functions, then event listner at the bottom
+});
+  // TODO: Add code to apply the past, present, or future class to each time
+  // block by comparing the id to the current hour.
 
   // This code should use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
@@ -44,7 +57,7 @@ $(function () {
   // attribute of each time-block be used to do this?
   //
   // TODO: Add code to display the current date in the header of the page.
-});
+
 
 // Pseudo Code
 // Step 1
