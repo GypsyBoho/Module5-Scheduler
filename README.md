@@ -33,7 +33,9 @@ To use the work day scheduler
 - If you are typing in some text that you don't use often, no need to save it, and when the page is refreshed the next day, that text will be gone, allowing you to type in new text without having to delete the previous text.
 - If you want to delete text some text simply click inside the hour block and delete the text.
 
-[See how it works](https://recordit.co/WziHwI5qmb)
+[See how it works](./Assets/WziHwI5qmb.mp4)
+
+[![See the work day scheduler in action](https://recordit.co/WziHwI5qmb)](https://recordit.co/WziHwI5qmb)
 
 ## Credits
 

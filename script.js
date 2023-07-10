@@ -14,6 +14,9 @@ $(function () {
     var timeBlockId = $(this).attr('id');
     var hourId = parseInt(timeBlockId.split('-')[1]);
 
+    // this added text at each row
+    // $(this).attr('placeholder', 'Enter your text here')
+
     // applying different classes depending on relation to current time //
     if (hourId < currentHour) {
       $(this).addClass('past');
